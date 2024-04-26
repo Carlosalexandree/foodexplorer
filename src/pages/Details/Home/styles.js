@@ -9,28 +9,6 @@ export const Container = styled.div`
   padding-bottom: 3.125rem;
 
   & hgroup {
-    position: relative;
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: clamp(9.375rem, 5.5433rem + 14.2574vw, 18.375rem);
-
-    margin-top: 0.5rem;
-
-    & img {
-      position: absolute;
-      width: clamp(12.5rem, 6.0606rem + 23.9604vw, 27.625rem);
-
-      top: 0;
-      left: clamp(0rem, 0.8515rem + -3.1683vw, -2rem);
-
-      @media (${({ theme }) => theme.SCREENS.MD}) {
-        left: clamp(-2rem, -1.1485rem + -3.1683vw, -4rem);
-      }
-    }
-
     & .texts {
       margin-top: 1.875rem;
       margin-right: clamp(1.25rem, -0.8787rem + 7.9208vw, 6.25rem);

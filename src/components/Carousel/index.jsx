@@ -30,11 +30,10 @@ const Carousel = ({ data = [1, 2, 3, 4, 5, 6, 7] }) => {
                 top: 0,
                 left: 0,
                 height: "100%",
-                width: "100px",
+                width: 0,
                 display: "flex",
                 alignItems: "center",
                 fontSize: "32px",
-                marginLeft: "10px",
             }}>
                 <span style={{ cursor: "pointer" }}>
                     &#60;
@@ -56,12 +55,11 @@ const Carousel = ({ data = [1, 2, 3, 4, 5, 6, 7] }) => {
                 top: 0,
                 right: 0,
                 height: "100%",
-                width: "60px",
+                width: 0,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "end",
                 fontSize: "32px",
-                marginRight: "10px",
             }}>
                 <span style={{ cursor: "pointer" }}>
                     &#62;
