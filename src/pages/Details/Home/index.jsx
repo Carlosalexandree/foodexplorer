@@ -2,6 +2,7 @@ import macarons from "../../../assets/macarons.webp";
 import { Container } from "./styles";
 import React from "react";
 import { Footer } from "../../../components/Footer";
+import Carousel from "../../../components/Carousel";
 
 export function Home() {
   return (
@@ -20,7 +21,10 @@ export function Home() {
         </div>
       </hgroup>
 
-      <div class="carousel">
+      <Carousel />
+      <Carousel data={["a", "b", "c", "d", "e", "f"]} />
+
+      {/* <div class="carousel">
         <button class="arrow-left control" aria-label="Previous">
           ◀
         </button>
@@ -52,7 +56,7 @@ export function Home() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {<Footer />}
     </Container>

@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 90rem;
   margin-inline: auto;
@@ -47,65 +48,5 @@ export const Container = styled.div`
         }
       }
     }
-  }
-
-  .carousel {
-    position: relative;
-    padding: 15px;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  .gallery-wrapper {
-    overflow-x: auto;
-  }
-
-  .gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 15px;
-  }
-
-  .arrow-left,
-  .arrow-right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: auto;
-    bottom: 0;
-    font-size: 20px;
-    line-height: 250px;
-    width: 40px;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    background: linear-gradient(to left, transparent 0%, black 200%);
-    opacity: 0.1;
-    transition: all 600ms ease-in-out;
-  }
-
-  .arrow-right {
-    left: auto;
-    right: 0;
-
-    background: linear-gradient(to right, transparent 0%, black 200%);
-  }
-
-  .arrow-left:hover,
-  .arrow-right:hover {
-    opacity: 1;
-  }
-
-  .item {
-    width: 250px;
-    height: 250px;
-    flex-shrink: 0;
-    opacity: 0.6;
-    transform: all 600ms ease-in-out;
-  }
-
-  .current-item {
-    opacity: 1;
   }
 `;

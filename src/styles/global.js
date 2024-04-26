@@ -27,7 +27,6 @@ html {
 body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     
     background-color: ${({ theme }) => theme.DARK.D400};
     color: #f1f1f1;
