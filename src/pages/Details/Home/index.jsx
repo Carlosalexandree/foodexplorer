@@ -5,11 +5,10 @@ import { Footer } from "../../../components/Footer";
 import Carousel from "../../../components/Carousel";
 
 export function Home() {
-  console.log(macarons);
   return (
     <Container>
       <div>
-        <h1>Topo</h1>
+        <h1>Food Explorer</h1>
       </div>
       <hgroup
         style={{
