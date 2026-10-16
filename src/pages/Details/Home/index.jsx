@@ -1,3 +1,5 @@
+import { Card } from "../../../components/Card";
+import { dishes } from "../../../data/dishes";
 import macarons from "../../../assets/macarons.webp";
 import { Container } from "./styles";
 import React from "react";
@@ -47,8 +49,19 @@ export function Home() {
         </div>
       </hgroup>
 
-      <Carousel />
-      <Carousel data={["a", "b", "c", "d", "e", "f"]} />
+      <div
+        style={{
+          display: "flex",
+          gap: "24px",
+          flexWrap: "wrap",
+          padding: "24px",
+          justifyContent: "center",
+        }}
+      >
+        {dishes.map((dish) => (
+          <Card key={dish.id} {...dish} />
+        ))}
+      </div>
 
       {<Footer />}
     </Container>
