@@ -1,4 +1,3 @@
-import { Card } from "../../../components/Card";
 import { dishes } from "../../../data/dishes";
 import macarons from "../../../assets/macarons.webp";
 import { Container } from "./styles";
@@ -7,6 +6,11 @@ import { Footer } from "../../../components/Footer";
 import Carousel from "../../../components/Carousel";
 
 export function Home() {
+
+  const refeicoes = dishes.filter((dish) => dish.category === "refeicoes");
+  const sobremeses = dishes.filter((dish) => dish.category === "sobremesas");
+  const bebidas = dishes.filter((dish) => dish.category === "bebidas");
+
   return (
     <Container>
       <div>
@@ -48,20 +52,9 @@ export function Home() {
           </div>
         </div>
       </hgroup>
-
-      <div
-        style={{
-          display: "flex",
-          gap: "24px",
-          flexWrap: "wrap",
-          padding: "24px",
-          justifyContent: "center",
-        }}
-      >
-        {dishes.map((dish) => (
-          <Card key={dish.id} {...dish} />
-        ))}
-      </div>
+            <Carousel title="Refeições" dishes={refeicoes} />
+            <Carousel title="Sobremesas" dishes={sobremeses} />
+            <Carousel title="Bebidas" dishes={bebidas} /> 
 
       {<Footer />}
     </Container>
