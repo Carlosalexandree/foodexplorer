@@ -6,7 +6,8 @@ export const Container = styled.div`
   align-items: center;
   gap: 12px;
 
-  width: 210px;
+  width: 304px;
+  height: 462px;
   padding: 24px;
   border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.DARK.D300};
