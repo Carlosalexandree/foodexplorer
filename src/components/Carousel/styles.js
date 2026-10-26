@@ -20,7 +20,7 @@ position: relative;
 
 .list {
 display: flex;
-gap: 16px;
+gap: 1.6875rem;
 overflow-x: auto;
 scroll-behavior: smooth;
 scroll-width: none;
@@ -50,7 +50,7 @@ scroll-width: none;
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 56px;
+      width: 8rem;
       border: none;
       color: ${({ theme }) => theme.LIGHT.L100};
       font-size: 2rem;

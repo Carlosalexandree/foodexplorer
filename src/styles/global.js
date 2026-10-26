@@ -25,8 +25,8 @@ html {
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     
     background-color: ${({ theme }) => theme.DARK.D400};
     color: #f1f1f1;
