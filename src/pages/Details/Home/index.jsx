@@ -6,9 +6,8 @@ import { Footer } from "../../../components/Footer";
 import Carousel from "../../../components/Carousel";
 
 export function Home() {
-
   const refeicoes = dishes.filter((dish) => dish.category === "refeicoes");
-  const sobremeses = dishes.filter((dish) => dish.category === "sobremesas");
+  const sobremesas = dishes.filter((dish) => dish.category === "sobremesas");
   const bebidas = dishes.filter((dish) => dish.category === "bebidas");
 
   return (
@@ -16,35 +15,12 @@ export function Home() {
       <div>
         <h1>Food Explorer</h1>
       </div>
-      <hgroup
-        style={{
-          alignSelf: "center",
-          height: "412px",
-          display: "flex",
-          alignItems: "end",
-        }}
-      >
-        <div
-          className="bg"
-          style={{
-            width: "1120px",
-            height: "260px",
-            background: "linear-gradient(180deg, #091E26 0%, #00131C 100%)",
-            display: "flex",
-            position: "relative",
-            justifyContent: "end",
-          }}
-        >
+
+      <hgroup>
+        <div className="bg">
           <div
-            style={{
-              height: "412px",
-              width: "656px",
-              top: "-152px",
-              left: "-23px",
-              position: "absolute",
-              backgroundImage: `url("${macarons}")`,
-              backgroundSize: "656px",
-            }}
+            className="hero-image"
+            style={{ backgroundImage: `url("${macarons}")` }}
           />
           <div className="texts">
             <h1>Sabores inigualáveis</h1>
@@ -52,9 +28,10 @@ export function Home() {
           </div>
         </div>
       </hgroup>
-            <Carousel title="Refeições" dishes={refeicoes} />
-            <Carousel title="Sobremesas" dishes={sobremeses} />
-            <Carousel title="Bebidas" dishes={bebidas} /> 
+
+      <Carousel title="Refeições" dishes={refeicoes} />
+      <Carousel title="Sobremesas" dishes={sobremesas} />
+      <Carousel title="Bebidas" dishes={bebidas} />
 
       {<Footer />}
     </Container>
