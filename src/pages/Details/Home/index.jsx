@@ -4,6 +4,7 @@ import { Container } from "./styles";
 import React from "react";
 import { Footer } from "../../../components/Footer";
 import Carousel from "../../../components/Carousel";
+import { Header } from "../../../components/Header";
 
 export function Home() {
   const refeicoes = dishes.filter((dish) => dish.category === "refeicoes");
@@ -12,9 +13,7 @@ export function Home() {
 
   return (
     <Container>
-      <div>
-        <h1>Food Explorer</h1>
-      </div>
+      <Header />
 
       <hgroup>
         <div className="bg">
