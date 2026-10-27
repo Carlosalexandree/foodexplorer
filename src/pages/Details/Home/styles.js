@@ -17,7 +17,11 @@ export const Container = styled.div`
     width: 100%;
     max-width: 72rem;
     padding-inline: 1rem;
-    margin-top: calc(var(--h) * 0.53 + 1rem);
+    margin-top: calc(var(--h) * 0.585 + 1rem);
+
+    @media (${({ theme }) => theme.SCREENS.MD}) {
+      margin-top: calc(var(--h) * 0.53 + 1rem);
+    }
 
     & .bg {
       position: relative;
@@ -31,13 +35,21 @@ export const Container = styled.div`
 
     & .hero-image {
       position: absolute;
-      left: calc(var(--h) * -0.27);
+      left: -2%;
       bottom: 0;
-      width: calc(var(--h) * 2.523);
-      height: calc(var(--h) * 1.531);
+      width: calc(var(--h) * 1.3);
+      height: calc(var(--h) * 1.585);
       background-repeat: no-repeat;
-      background-size: 92% auto;
-      background-position: left top;
+      background-size: contain;
+      background-position: left bottom;
+
+      @media (${({ theme }) => theme.SCREENS.MD}) {
+        left: calc(var(--h) * -0.27);
+        width: calc(var(--h) * 2.523);
+        height: calc(var(--h) * 1.531);
+        background-size: 100% auto;
+        background-position: left top;
+      }
     }
 
     & .texts {
