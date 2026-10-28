@@ -23,6 +23,11 @@ export const Container = styled.div`
     font-weight: 500;
     text-align: center;
   }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
 
   p {
     color: ${({ theme }) => theme.LIGHT.L400};
