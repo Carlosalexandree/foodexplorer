@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCart } from "../../hooks/cart";
 import {
   Hexagon,
   List,
@@ -11,6 +12,7 @@ import { Container, Content } from "./styles";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { totalItems } = useCart();
 
   return (
     <Container>
@@ -36,12 +38,12 @@ export function Header() {
 
         <button type="button" className="orders">
           <Receipt size={24} />
-          Pedidos (0)
+          Pedidos ({totalItems})
         </button>
 
         <button type="button" className="cart" aria-label="Pedidos">
           <Receipt size={32} />
-          <span>0</span>
+          <span>{totalItems}</span>
         </button>
 
         <button type="button" className="signout" aria-label="Sair">

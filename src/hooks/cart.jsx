@@ -1,4 +1,3 @@
-import { title } from "process";
 import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext({})
