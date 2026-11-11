@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCart } from "../../hooks/cart";
+import { useNavigate } from "react-router-dom";
 import {
   Hexagon,
   List,
@@ -13,6 +14,7 @@ import { Container, Content } from "./styles";
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { totalItems } = useCart();
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -36,12 +38,12 @@ export function Header() {
           <input type="text" placeholder="Busque por pratos ou ingredientes" />
         </label>
 
-        <button type="button" className="orders">
+        <button type="button" className="orders" onClick={() => navigate("/pedidos")}>
           <Receipt size={24} />
           Pedidos ({totalItems})
         </button>
 
-        <button type="button" className="cart" aria-label="Pedidos">
+        <button type="button" className="cart" aria-label="Pedidos" onClick={() => navigate("/pedidos")}>
           <Receipt size={32} />
           <span>{totalItems}</span>
         </button>

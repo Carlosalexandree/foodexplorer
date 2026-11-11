@@ -24,11 +24,29 @@ export function CartProvider({ children }) {
         });
     }
 
+    function removeFromCart(id) {
+        setItems((prevItems)=> prevItems.filter((item) => item.id !== id))
+    }
+
+    function changeQuantity(id, amount) {
+        setItems((prevItems) =>
+        prevItems
+            .map((item) =>
+             item.id === id
+            ? { ...item, quantity: item.quantity + amount }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
+  }
+
     const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
+
+    const totalPrice = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
     
     return (
         <CartContext.Provider value={{
-            items, addToCart, totalItems
+            items, addToCart, changeQuantity, totalItems, removeFromCart, totalPrice
         }}>
             {children}
         </CartContext.Provider>
