@@ -5,10 +5,13 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { dishes } from "../../data/dishes";
 import { Container, Content } from "./styles";
+import {useCart} from "../../hooks/cart";
 
 export function Dish() {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
+
+    const { addToCart } = useCart();
 
   const dish = dishes.find((item) => item.id === Number(id));
 
@@ -68,7 +71,11 @@ export function Dish() {
                 </button>
               </div>
 
-              <button type="button" className="add">
+              <button 
+              type="button" 
+              className="add"
+              onClick={() => addToCart(dish, quantity)}
+              >
                 incluir · {total}
               </button>
             </div>
