@@ -4,8 +4,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 90rem;
-  margin-inline: auto;
   padding-bottom: 3.125rem;
 
   & hgroup {
