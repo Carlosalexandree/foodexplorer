@@ -10,7 +10,9 @@ export function Card({ id, title, description, price, image }) {
 
   return (
     <Container>
-      <img src={image} alt={title} />
+      <Link to={`/prato/${id}`} className="image-link" tabIndex={-1}>
+        <img src={image} alt={title} />
+      </Link>
 
       <Link to={`/prato/${id}`}>
         <h2>{title}</h2>
